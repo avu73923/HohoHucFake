@@ -761,7 +761,7 @@ do
         })})
     end
 
-	GET_KEY.Visible = false
+	GET_KEY.Visible = true
 	TweenService:Create(GET_KEY,INFO_DOT25_QUAD,{GroupTransparency = 0}):Play()
 
 	local api = loadstring(game:HttpGet("https://sdkapi-public.luarmor.net/library.lua"))()
@@ -818,8 +818,7 @@ do
 	end)
 
 	Get.MouseButton1Click:Connect(function()
-        setclipboard('https://hohocomunity.xyz/api/getkeyv4?hwid=' .. tick())
-        StarterGui:SetCore("SendNotification",{
+        setclipboard(123{
             Title = "Key System",
             Text = "Key Link 1 Copied!",
             Icon = "rbxassetid://16276677105"
@@ -837,7 +836,7 @@ do
 	
 	do
 		if isfile("HohoKeyV4.txt") or _G.MY_KEY_IS then
-			local key = _G.MY_KEY_IS and _G.MY_KEY_IS or readfile("HohoKeyV4.txt")
+			local key = false
             Frame.Textbox.Text = key
 			do_check_key(key)
 		end
